@@ -37,7 +37,7 @@ namespace TorrentBackend.Controllers
         }
 
         [HttpPost("/api/Download/")]
-        public async Task<IActionResult> Get([FromBody]Models.DownloadRequest downloadRequest)
+        public async Task<IActionResult> Get([FromBody]Models.DownloadRequestModel downloadRequest)
         {
             string type = downloadRequest.TorrentType.ToLower();
             string mappedType = "";

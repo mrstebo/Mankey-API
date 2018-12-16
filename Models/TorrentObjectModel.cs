@@ -1,6 +1,6 @@
 namespace TorrentBackend.Models
 {
-    public class TorrentObject
+    public class TorrentObjectModel
     {
         private string _progress;
         public string Hash {get;set;}

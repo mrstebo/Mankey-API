@@ -47,7 +47,7 @@ namespace TorrentBackend.Controllers
         public async Task<JsonResult> Episodes(string url)
         {
             url = "shows/" + url;
-            List<AnimeResponse> values = new List<AnimeResponse>();
+            List<AnimeResponseModel> values = new List<AnimeResponseModel>();
             using(WebClient WC = new WebClient())
             {
                 var firstResponse = await WC.DownloadStringTaskAsync(horribleSubsUrl + url);
@@ -60,7 +60,7 @@ namespace TorrentBackend.Controllers
                 agilityPack.LoadHtml(secondResponse);
                 foreach(var row in agilityPack.DocumentNode.SelectNodes("//*[contains(@class,'rls-info-container')]"))
                 {
-                    var newobject = new AnimeResponse();
+                    var newobject = new AnimeResponseModel();
                     var mainrow = row.ChildNodes.FirstOrDefault(x => x.HasClass("rls-label"));
                     var date = mainrow.ChildNodes.FirstOrDefault(x => x.HasClass("rls-date")).InnerText.Trim();
                     var name = mainrow.ChildNodes.FirstOrDefault(x => x.NodeType == HtmlNodeType.Text && x.InnerText.Trim() != "").InnerText.Trim();

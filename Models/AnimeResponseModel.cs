@@ -1,6 +1,6 @@
 namespace mankey_api.Models
 {
-    public class AnimeResponse
+    public class AnimeResponseModel
     {
         public string type {get => "Anime";}
         public string name {get;set;}

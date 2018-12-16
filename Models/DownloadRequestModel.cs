@@ -1,6 +1,6 @@
 namespace TorrentBackend.Models
 {
-    public class DownloadRequest
+    public class DownloadRequestModel
     {
         public string ParentFolder {get;set;}
         public string TorrentType {get;set;}
