@@ -1,0 +1,10 @@
+{
+    "endpoint": "/",
+    "deluge_web_password": "",
+    "proxy": {
+        "uri": "",
+        "port": 6060,
+        "username": "",
+        "password": ""
+    }
+}
