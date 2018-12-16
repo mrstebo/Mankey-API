@@ -66,7 +66,7 @@ namespace TorrentBackend.Controllers
             {
                 mappedType += downloadRequest.ParentFolder + "/";
             }
-            string payload = System.IO.File.ReadAllText("example.json").Replace("{MAGNETURI}",downloadRequest.MagnetUri).Replace("{TYPEMAPPED}",mappedType);
+            string payload = System.IO.File.ReadAllText("Json Templates/add_torrent.json").Replace("{MAGNETURI}",downloadRequest.MagnetUri).Replace("{TYPEMAPPED}",mappedType);
             try
             {
                 DelugeWebClient delugeWebClient = new DelugeWebClient((string)Program.config.deluge_web_password);
