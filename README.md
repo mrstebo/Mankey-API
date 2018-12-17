@@ -1,5 +1,5 @@
 # Mankey-API
-Horribly written API, make beautiful by .NET
+Horribly written API, made beautiful with .NET
 
 ## Does it current work?: 
 
